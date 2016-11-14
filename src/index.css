@@ -3,3 +3,14 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.analog-clock {
+  background: '#fff';
+  border: '#ececec';
+  center: '#000';
+  seconds: '#f56c6c';
+  minutes: '#ccc';
+  hour: '#000';
+  tick: '#000';
+  width: 400;
+}

@@ -68,7 +68,7 @@ const AnalogLargeTick = {
 export default {
     base: AnalogBase,
     center: AnalogCenter,
-    second: AnalogSecondHand,
+    seconds: AnalogSecondHand,
     minute: AnalogMinuteHand,
     hour: AnalogHourHand,
     smallTick: AnalogSmallTick,

@@ -1,14 +1,16 @@
 import React from 'react';
 import Moment from 'moment';
+import { cssTransform, updateTime } from './util';
 import Styles from './clock-styles';
 
-export default class Clock extends React.Component {
+export default class AnalogClock extends React.Component {
   constructor(props) {
     super(props);
+    var now = Moment();
     this.state = {
-      seconds: Moment().format(ss),
-      minutes: Moment().format(mm),
-      hour: Moment.format(HH),
+      seconds: now.seconds(),
+      minutes: now.minutes(),
+      hour: now.hour(),
     };
   }
   componentDidMount() {
@@ -27,12 +29,12 @@ export default class Clock extends React.Component {
 
   render() {
     return (
-      <div style={styles.base}>
-          <SecondHand />
-          <MinutesHand />
-          <HourHand />
-          <div style={styles.center}></div>
-          {assignTicks(styles)}
+      <div class="analog-clock" style={styles.base}>
+      <SecondHand />
+      <MinutesHand />
+      <HourHand />
+      <div style={styles.center}></div>
+      {assignTicks(styles)}
       </div>
     )
   }
@@ -78,14 +80,3 @@ function assignTicks({ smallTick, largeTick }) {
   }
   return ticks;
 }
-
-AnalogClock.defaultProps = {
-  background: '#fff',
-  border: '#ececec',
-  center: '#000',
-  seconds: '#f56c6c',
-  minutes: '#ccc',
-  hour: '#000',
-  tick: '#000',
-  width: 400,
-};
