@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import AnalogClock from '../AnalogClock';
 import MinuteHand from '../Hands/MinuteHand';
 import Moment from 'moment';
