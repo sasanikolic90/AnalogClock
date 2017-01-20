@@ -24,10 +24,6 @@ export default class AnalogClock extends React.Component {
     }, 1000);
   }
 
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
   render() {
     const styles = cssTransform(Styles, this.props);
 
@@ -38,5 +34,9 @@ export default class AnalogClock extends React.Component {
         <HourHand hour={this.state.hour} />
       </div>
     )
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 }
